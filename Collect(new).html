@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="./js/config.js"></script>
+  <meta charset="UTF-8">
+  <title>Collect</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./css/collect.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="nav-inner">
+      <ul class="menu">
+        <li><a href="./home.html">HOME</a></li>
+        <li><a class="active" href="./collect.html">Collect</a></li>
+        <li><a href="./gallery.html">Gallery</a></li>
+        <li><a href="./custom.html">Custom</a></li>
+        <li><a href="./game.html">Game</a></li>
+      </ul>
+      <div class="logo-cta">
+        <a href="./me.html">
+          <img src="./asset/logo2.png" alt="logo">
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <section class="collect" aria-labelledby="collect-title">
+    <div class="hero">
+      <h1 id="collect-title" class="title">Collect</h1>
+      <p class="subtitle">Record and add to your collection</p>
+    </div>
+  </section>
+
+  <section class="how-it-works">
+    <div class="how-section">
+      <div class="steps-wrapper">
+        <div class="step-item">
+          <div class="step-visual">
+            <span class="step-num">01</span>
+            <div class="step-line"></div>
+          </div>
+          <div class="step-info">
+            <h3>Recording</h3>
+            <p>받침대에 AUD를 올려놓고,레코드 버튼을 누르세요.</p>
+          </div>
+        </div>
+        
+        <div class="step-item">
+          <div class="step-visual">
+            <span class="step-num">02</span>
+            <div class="step-line"></div>
+          </div>
+          <div class="step-info">
+            <h3>Listening Silhouette</h3>
+            <p>실시간으로 그려지는 소리를 감상합니다.</p>
+          </div>
+        </div>
+        
+        <div class="step-item">
+          <div class="step-visual">
+            <span class="step-num">03</span>
+          </div>
+          <div class="step-info">
+            <h3>Complete Collection</h3>
+            <p>갤러리에 소리의 실루엣을 저장하세요.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stack">
+      <button id="recBtn" class="btn btn-record">Record</button>
+      <div id="errorBox" class="error" hidden></div>
+      <canvas id="waveCanvas" class="wave"></canvas>
+      <div class="result-wrap">
+        <a id="resultLink" href="#" hidden>
+          <button id="resultBtn" class="result-btn" type="button">Open</button>
+        </a>
+        <button id="resultNone" class="result-btn" type="button" disabled hidden>None</button>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://aud-api-cdvn.onrender.com/socket.io/socket.io.js"></script>
+  <script src="./js/socket-init.js"></script>
+  <script src="./js/fetch-sanitizer.js"></script>
+  <script src="./js/auth-boot.js" defer></script>
+  <script src="./js/auth-keepalive.js" defer></script>
+  <script type="module" src="./js/store.js"></script>
+  <script src="./collect.js"></script>
+</body>
+</html>

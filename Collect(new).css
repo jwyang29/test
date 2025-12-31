@@ -1,0 +1,69 @@
+/* =====================================================================
+   0) Base
+===================================================================== */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --accent: #FFA765;
+  --nav-h: 64px;
+  --text: #111;
+  --muted: #666;
+}
+
+html, body { height: 100%; }
+body {
+  min-width: 400px;
+  font-family: 'Inter', sans-serif;
+  color: var(--text);
+  background: radial-gradient(1000px 600px at 50% 45%, #FFFFFF 0%, #F9F9FA 20%, #E6E6E8 40%, #D4D2D3 70%, #BEBEC2 100%);
+}
+
+/* =====================================================================
+   1) Navigation
+===================================================================== */
+header.nav { position: sticky; top: 0; z-index: 100; height: var(--nav-h); background: transparent; }
+.nav-inner { display: flex; align-items: center; justify-content: space-between; height: 100%; padding: 0 27px; }
+.menu { display: flex; gap: 20px; list-style: none; }
+.menu a { color: #333; text-decoration: none; font-size: 15px; font-weight: 500; opacity: .9; }
+.menu a.active { color: var(--accent); font-weight: 700; }
+.logo-cta img { height: 24px; }
+
+/* =====================================================================
+   2) Hero
+===================================================================== */
+.collect { padding-top: 40px; text-align: center; }
+.title { font-size: 32px; font-weight: 800; letter-spacing: -0.5px; }
+.subtitle { font-size: 14px; color: var(--muted); margin-top: 4px; }
+
+/* =====================================================================
+   3) How it works - Vertical Wave-Path (수정됨)
+===================================================================== */
+.how-section {
+  width: 100%;
+  max-width: 350px;
+  margin: 30px auto 40px;
+  padding: 0 20px;
+}
+.steps-wrapper { display: flex; flex-direction: column; }
+.step-item { display: flex; gap: 25px; align-items: flex-start; }
+.step-visual { display: flex; flex-direction: column; align-items: center; width: 30px; flex-shrink: 0; }
+.step-num { font-size: 13px; font-weight: 800; color: var(--accent); background: #fff; z-index: 2; }
+.step-line { width: 1.5px; height: 55px; background: linear-gradient(to bottom, var(--accent) 0%, rgba(255,167,101,0.2) 100%); margin: 8px 0; z-index: 1; }
+.step-info { padding-top: 2px; }
+.step-info h3 { font-size: 15px; font-weight: 700; margin-bottom: 6px; text-transform: uppercase; }
+.step-info p { font-size: 13px; color: #666; line-height: 1.55; word-break: keep-all; }
+
+/* =====================================================================
+   4) Record Stack
+===================================================================== */
+.stack { text-align: center; margin-top: 20px; }
+.btn-record {
+  width: 120px; height: 120px; border-radius: 50%; border: 4px solid #fff;
+  background: var(--accent); color: #fff; font-weight: 700; font-size: 16px;
+  cursor: pointer; box-shadow: 0 10px 20px rgba(0,0,0,0.1); transition: transform 0.2s;
+}
+.btn-record:active { transform: scale(0.95); }
+.wave { display: block; width: 400px; height: 70px; margin: 20px auto; background: transparent; }
+.result-btn {
+  background: #111; color: #fff; border: none; padding: 12px 30px; border-radius: 25px;
+  font-size: 14px; font-weight: 600; cursor: pointer;
+}
